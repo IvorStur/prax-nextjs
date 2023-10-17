@@ -11,7 +11,8 @@
     "db:migrate:dev:new": "ts-node -T lib/scripts/migrations/new.ts",
     "db:migrate:dev:down": "ts-node -T lib/scripts/migrations/down.ts",
     "db:codegen:dev": "kysely-codegen --camel-case --url data/app.db --out-file src/lib/db.d.ts",
-    "db:seed:dev": "ts-node -T lib/scripts/seed-db.ts"
+    "db:seed:dev": "ts-node -T lib/scripts/seed-db.ts",
+    "db:seed-faker:dev": "ts-node -T lib/scripts/seed-db-faker.ts"
   },
   "dependencies": {
     "@types/node": "20.6.0",
@@ -30,6 +31,7 @@
     "typescript": "5.2.2"
   },
   "devDependencies": {
+    "@faker-js/faker": "^8.2.0",
     "@next/eslint-plugin-next": "^13.4.19",
     "@types/better-sqlite3": "^7.6.4",
     "eslint-config-prettier": "^9.0.0",
